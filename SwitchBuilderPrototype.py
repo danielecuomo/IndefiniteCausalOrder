@@ -10,10 +10,7 @@ from qiskit import QuantumCircuit, QuantumRegister
 from qiskit.quantum_info import Operator
 
 def OneQubitSwitchGate(D, E):
-
-    q = QuantumRegister(1, name='q')
-    a = QuantumRegister(1, name='a')
-    switch = QuantumCircuit(q, a, name='$\mathcal{S}$')
+    switch = QuantumCircuit(2, name='$\mathcal{S}$')
     
     Dmat = D.to_matrix()
     cD = Operator([[Dmat[0][0], Dmat[0][1], 0, 0],
