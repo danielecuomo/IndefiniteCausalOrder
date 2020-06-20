@@ -1,0 +1,4 @@
+function RHO = superop(RHO, chi)
+    RHO = [chi(1,1)*RHO(1:end/2, 1:end/2) + chi(1,2)*RHO(1:end/2, end/2+1:end) + chi(2,1)*RHO(end/2+1:end, 1:end/2) + chi(2,2)*RHO(end/2+1:end, end/2+1:end), chi(1,3)*RHO(1:end/2, 1:end/2) + chi(1,4)*RHO(1:end/2, end/2+1:end) + chi(2,3)*RHO(end/2+1:end, 1:end/2) + chi(2,4)*RHO(end/2+1:end, end/2+1:end);
+        chi(3,1)*RHO(1:end/2, 1:end/2) + chi(3,2)*RHO(1:end/2, end/2+1:end) + chi(4,1)*RHO(end/2+1:end, 1:end/2) + chi(4,2)*RHO(end/2+1:end, end/2+1:end), chi(3,3)*RHO(1:end/2, 1:end/2) + chi(3,4)*RHO(1:end/2, end/2+1:end) + chi(4,3)*RHO(end/2+1:end, 1:end/2) + chi(4,4)*RHO(end/2+1:end, end/2+1:end)];
+end
